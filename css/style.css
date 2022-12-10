@@ -9,18 +9,28 @@
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50px 500px 500px 50px;
+    grid-template-rows: 100px 500px 500px 100px;
     grid-template-areas: 
-    "he he"
-    "se ar"
-    "se ar"
-    "fo fo ";
-    gap: 10px;
+    "hea hea"
+    "sec se1"
+    "se2 art"
+    "foo foo";
+    gap: 100px;
+}
+
+#grid_card{
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "he he he"
+  "se se se"
+  "fo fo fo";
 }
 
 header{
     background: peachpuff;
-    grid-area: he;
+    grid-area: hea;
     display: flex;
     flex-direction: row;
     height: 86px;
@@ -29,28 +39,63 @@ header{
 }
 
 article{
-    grid-area: ar;
+    grid-area: art;
     display: flex;
     flex-direction: column;
     height: 500px;
-    justify-items: end;
-    align-items: flex-end;
+    justify-items: center;
+    justify-content: space-around;
 }
 
+.img_article{
+  height: 800x;
+  width: auto;
+  border-radius: 20px;
+  
+}
+
+h2{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2rem;
+
+}
+
+p:hover{
+  color: aqua;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#section_right{
+  grid-area: se1;
+}
 #section_up{
-    grid-area: se;
+    grid-area: sec;
     flex-direction: row;
-    height: 1fr;
+    height: 500px;
+    background: brown;
+}
+
+.open_daily{
+  background: green;
+  margin: 150px;
+  padding: 100px;
 }
 
 #section_down{
-    grid-area: se;
+    grid-area: se2;
     flex-direction: row;
+    height: 500px;
+    background: yellow;
 }
 
+.tickets{
+  background: pink;
+  margin: 150px;
+  padding: 100px; 
+}
 footer{
     background: peachpuff;
-    grid-area: fo;
+    grid-area: foo;
     height: 50px;
     font-size: 20px;
     justify-content: center;
@@ -62,6 +107,11 @@ footer{
 .topnav {
     overflow: hidden;
     background-color: peachpuff;
+    height: 86px;
+    grid-area: he;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
   
   /* Style the links inside the navigation bar */
