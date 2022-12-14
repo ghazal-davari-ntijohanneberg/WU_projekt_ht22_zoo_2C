@@ -9,104 +9,154 @@
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px 500px 500px 100px;
+    grid-template-rows: 100px 500px 100px 500px 150px;
     grid-template-areas: 
     "hea hea"
-    "sec se1"
-    "se2 art"
+    "art art"
+    "sec1 sec1"
+    "se2 sec"
     "foo foo";
-    gap: 100px;
+    
 }
 
-#grid_card{
-  display: grid;
+body{
   height: 100vh;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: 
-  "he he he"
-  "se se se"
-  "fo fo fo";
+  font-family: 'Playfair Display',serif;
 }
 
 header{
-    background: peachpuff;
+    background: rgb(63, 141, 75);
     grid-area: hea;
     display: flex;
     flex-direction: row;
-    height: 86px;
+    height: auto;
     justify-content: space-between;
     align-items: center;
 }
 
-article{
+#article_picture{
     grid-area: art;
     display: flex;
     flex-direction: column;
-    height: 500px;
+    height: 600px;
     justify-items: center;
     justify-content: space-around;
+    background-image: url("../img/animals/panda.jpg");
+    background-size: cover;
+    background-position: center center;
 }
 
 .img_article{
-  height: 800x;
-  width: auto;
-  border-radius: 20px;
-  
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+.img_article.active{
+  transform: translateY(0);
+  opacity: 1;
 }
 
 h2{
-  font-family: 'Courier New', Courier, monospace;
   font-size: 2rem;
-
+  padding: 20px;
 }
 
 p:hover{
-  color: aqua;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: blue
 }
 
-#section_right{
-  grid-area: se1;
-}
 #section_up{
     grid-area: sec;
     flex-direction: row;
     height: 500px;
-    background: brown;
-}
-
-.open_daily{
-  background: green;
-  margin: 150px;
-  padding: 100px;
+    background-size: cover;
+    background: #A4BE7B;
+    padding: 20px;
 }
 
 #section_down{
     grid-area: se2;
     flex-direction: row;
     height: 500px;
-    background: yellow;
+    background:rgb(227, 160, 218) ;
+    background-image: url("../img/animals/bear2.jpg");
+    background-size: cover;
+    background-position: center center;
+    padding: 20px;
 }
 
-.tickets{
-  background: pink;
-  margin: 150px;
-  padding: 100px; 
+#section_middle{
+  grid-area: sec1;
+  flex-direction: row;
+  height: 100px;
+  background: rgb(63, 141, 75) ;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
 }
+
+.info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.info_bttn{
+  padding: 15px 60px;
+  background-color: #E5D9B6;
+  color: black;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 2px 2px rgb(67, 61, 61);
+}
+
+.info_bttn:hover{
+  background-color:#eeeadd;
+  transition: 0.6s;
+}
+
+.info_bttn:focus {
+  outline-color: transparent;
+  outline-style:solid;
+  box-shadow: 0 0 0 4px #dab455;
+}
+
 footer{
-    background: peachpuff;
+    background:rgb(63, 141, 75);
     grid-area: foo;
-    height: 50px;
+    height: auto;
     font-size: 20px;
     justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
+.read_more_bttn{
+  padding: 15px 60px;
+  background-color: #E5D9B6;
+  color: black;
+  cursor: pointer;
+  font-size: 20px;
+}
 
+.read_more_bttn:hover{
+  background-color:#eeeadd;
+  transition: 0.6s;
+}
 
+.read_more_bttn:focus {
+  outline-color: transparent;
+  outline-style:solid;
+  box-shadow: 0 0 0 4px #1d01a7;
+}
 /* Add a black background color to the top navigation bar */
 .topnav {
     overflow: hidden;
-    background-color: peachpuff;
+    background-color: rgb(63, 141, 75);
     height: 86px;
     grid-area: he;
     display: flex;
@@ -127,14 +177,15 @@ footer{
   
   /* Change the color of links on hover */
   .topnav a:hover {
-    background-color: #ddd;
+    background-color: rgb(96, 180, 138);
     color: black;
+    transition: 0.7s;
   }
   
   /* Style the "active" element to highlight the current page */
   .topnav a.active {
-    background-color: #f3a621;
-    color: white;
+    background-color: #1d4728;
+    color: rgb(255, 255, 255);
   }
   
   /* Style the search box inside the navigation bar */
@@ -161,3 +212,92 @@ footer{
       border: 1px solid #ccc;
     }
   }
+
+
+  #grid_about{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 400px 700px 400px 1fr;
+    grid-template-areas: 
+    "hea hea hea hea"
+    "sec1 sec1 sec2 sec2"
+    "sec3 arti arti sec4"
+    "sec5 sec5 sec6 sec6"
+    "foo foo foo foo";
+  }
+  
+#section_left{
+    grid-area: sec1;
+    flex-direction: row;
+    background: #e3e19b ;
+}
+
+#section_right{
+    grid-area: sec2;
+    flex-direction: row;
+    background: #c57282;
+    background-image: url("../img/animals/bear.jpg");
+    background-size: cover;
+    background-position: center center;
+
+}
+
+#section_left2{
+  grid-area: sec3;
+  flex-direction: column;
+  background:#cb8090;
+}
+
+#section_right2{
+  grid-area: sec4;
+  flex-direction: column;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  writing-mode: vertical-lr;
+  font-size: xx-large;
+  direction: ltr;
+  background: #d9c29b;
+}
+
+#section_downleft{
+  grid-area: sec5;
+  flex-direction: row;
+  background: #ded29b;
+  background-image: url("../img/animals/cheetah2.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+#section_downright{
+  grid-area: sec6;
+  flex-direction: row;
+  background: #e7f089;
+}
+
+#article_middle{
+  grid-area: arti;
+  flex-direction: row;
+  height: 500px;
+}
+
+
+
+
+
+
+
+#grid_card{
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 200px 200px 100px;
+  grid-template-areas: 
+  "hea hea hea"
+  "se se se"
+  "se se se"
+  "fo fo fo";
+}
