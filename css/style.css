@@ -8,15 +8,14 @@
 #grid_wrapper{
     display: grid;
     height: 100vh;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 100px 500px 100px 500px 150px;
     grid-template-areas: 
-    "hea hea"
-    "art art"
-    "sec1 sec1"
-    "se2 sec"
-    "foo foo";
-    
+    "hea hea hea"
+    "art art art"
+    "sec1 sec1 sec1"
+    "se2 se2 sec"
+    "foo foo foo";
 }
 
 body{
@@ -33,6 +32,7 @@ header{
     justify-content: space-between;
     align-items: center;
 }
+
 
 #article_picture{
     grid-area: art;
@@ -58,11 +58,18 @@ header{
 }
 
 h2{
-  font-size: 2rem;
-  padding: 20px;
+  font-size: 80px;
+  padding: 10px;
 }
 
-p:hover{
+#h2_section_up{
+  font-size: 90px;
+  padding: 20px;
+  position: relative;
+  left: 100px;
+}
+
+#p_main:hover{
   color: blue
 }
 
@@ -71,16 +78,15 @@ p:hover{
     flex-direction: row;
     height: 500px;
     background-size: cover;
-    background: #A4BE7B;
     padding: 20px;
+    background-image: url("../img/animals/cobra_photoshop.jpg");
 }
 
 #section_down{
     grid-area: se2;
     flex-direction: row;
     height: 500px;
-    background:rgb(227, 160, 218) ;
-    background-image: url("../img/animals/bear2.jpg");
+    background-image: url("../img/animals/peacock_photoshop.jpg");
     background-size: cover;
     background-position: center center;
     padding: 20px;
@@ -135,24 +141,49 @@ footer{
     text-align: center;
 }
 
-.read_more_bttn{
+#read_more_bttn1{
   padding: 15px 60px;
+  position: relative;
+  left: 650px;
+  top: 100px;
   background-color: #E5D9B6;
   color: black;
   cursor: pointer;
   font-size: 20px;
 }
 
-.read_more_bttn:hover{
+#read_more_bttn1:hover{
   background-color:#eeeadd;
   transition: 0.6s;
 }
 
-.read_more_bttn:focus {
+#read_more_bttn{
+  padding: 15px 60px;
+  position: relative;
+  top: 22px;
+  background-color: #E5D9B6;
+  color: black;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#read_more_bttn:hover{
+  background-color:#eeeadd;
+  transition: 0.6s;
+}
+
+#read_more_bttn:focus{
   outline-color: transparent;
   outline-style:solid;
-  box-shadow: 0 0 0 4px #1d01a7;
+  box-shadow: 0 0 0 4px #dab455;
 }
+
+#read_more_bttn1:focus{
+  outline-color: transparent;
+  outline-style:solid;
+  box-shadow: 0 0 0 4px #dab455;
+}
+
 /* Add a black background color to the top navigation bar */
 .topnav {
     overflow: hidden;
@@ -218,12 +249,14 @@ footer{
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 400px 700px 400px 1fr;
-    grid-template-areas: 
+    grid-template-rows: 1fr 800px 1000px 800px 500px 1000px 1fr;
+    grid-template-areas:
     "hea hea hea hea"
     "sec1 sec1 sec2 sec2"
     "sec3 arti arti sec4"
     "sec5 sec5 sec6 sec6"
+    "art art art sec7"
+    "art2 art2 art2 sec8"
     "foo foo foo foo";
   }
   
@@ -256,7 +289,6 @@ footer{
   display: flex;
   align-items: center;
   justify-content: center;
-  height: auto;
   writing-mode: vertical-lr;
   font-size: xx-large;
   direction: ltr;
@@ -281,14 +313,87 @@ footer{
 #article_middle{
   grid-area: arti;
   flex-direction: row;
-  height: 500px;
+  text-align: center;
 }
 
+#p_article_middle{
+  display: flex;
+  padding: 30px;
+  margin: 40px;
+  font-size: 25px;
+}
 
+#our_team{
+  grid-area: art;
+  text-align: center;
+  flex-direction: row;
+  height: 500px;
+  display: flex;
+  justify-content: space-around;
+}
 
+#section_our_team{
+  grid-area: sec7;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-lr;
+  font-size: xx-large;
+  direction: ltr;
+}
 
+.img_our_team{
+  border-radius: 50%;
+  height: 400px;
+  display: flex;
+  margin: 50px;
+}
 
+.imf_our_team2{
+  border-radius: 50%;
+  height: 400px;
+  display: flex;
+  margin: 50px;
+}
 
+#article_restaurant{
+  grid-area: art2;
+  display: flex;
+  flex-direction: row;
+  background: #FFF6C3;
+  text-align: center;
+}
+
+#section_restaurant{
+  grid-area: sec8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-lr;
+  font-size: xx-large;
+  direction: ltr;
+  background: #cb8090;
+}
+
+#h1_restaurant{
+  display: flex;
+  padding: 30px;
+  margin: 40px;
+  position: relative;
+  font-size: 25px;
+}
+
+#p_restaurant{
+  display: flex;
+  margin-bottom: 30px;
+  padding: 30px;
+  margin: 40px;
+  position: relative;
+  top: 6%;
+  font-size: 25px;
+}
 
 #grid_card{
   display: grid;
@@ -297,7 +402,16 @@ footer{
   grid-template-rows: 100px 200px 200px 100px;
   grid-template-areas: 
   "hea hea hea"
-  "se se se"
+  "se1 se1 se1"
   "se se se"
   "fo fo fo";
 }
+
+#restaurant_picture{
+  grid-area: se1;
+  display: flex;
+  background-image: url("../img/persons/restaurant.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
