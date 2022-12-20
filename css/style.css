@@ -263,7 +263,7 @@ footer{
 #section_left{
     grid-area: sec1;
     flex-direction: row;
-    background: #e3e19b ;
+    background: #e3e19b;
 }
 
 #section_right{
@@ -360,9 +360,10 @@ footer{
 #article_restaurant{
   grid-area: art2;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background: #FFF6C3;
   text-align: center;
+  align-items: center;
 }
 
 #section_restaurant{
@@ -387,31 +388,117 @@ footer{
 
 #p_restaurant{
   display: flex;
-  margin-bottom: 30px;
+  padding: 30px;
+  margin-top: 10px;
+  font-size: 25px;
+}
+
+#p_restaurant2{
+  display: flex;
   padding: 30px;
   margin: 40px;
   position: relative;
-  top: 6%;
   font-size: 25px;
+}
+
+#h1_restaurant{
+  display: flex;
+  padding: 30px;
+  margin-bottom: 10px;
+  font-size: 50px;
 }
 
 #grid_card{
   display: grid;
   height: 100vh;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 100px 200px 200px 100px;
+  grid-template-rows: 1fr 600px 600px 600px 1fr;
   grid-template-areas: 
   "hea hea hea"
   "se1 se1 se1"
-  "se se se"
-  "fo fo fo";
+  "art art2 art3"
+  "art4 art5 art6"
+  "foo foo foo";
+}
+
+#body_card{
+  background: #d9c29b;
+  height: 100vh;
+  font-family: 'Playfair Display',serif;
 }
 
 #restaurant_picture{
   grid-area: se1;
   display: flex;
+  flex-direction: row;
   background-image: url("../img/persons/restaurant.jpg");
   background-size: cover;
   background-position: center center;
 }
 
+#food1{
+  grid-area: art;
+  display: flex;
+  padding: 20px;
+  margin: 20px;
+  flex-direction: column;
+  background-image: url("../img/food/stake.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+#food2{
+  grid-area: art2;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 20px;
+  background-image: url("../img/food/fish_n_chips.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+#food3{
+  grid-area: art3;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 20px;
+  background-image: url("../img/food/meatballs.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+#food4{
+  grid-area: art4;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 20px;
+  background-image: url("../img/food/pizza.jpg");
+  background-position: center center;
+  background-size: cover;
+  
+}
+
+#food5{
+  grid-area: art5;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 20px;
+  background-image: url("../img/food/paella.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+#food6{
+  grid-area: art6;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  margin: 20px;
+  background-image: url("../img/food/samosa.jpg");
+  background-position: center center;
+  background-size: cover;
+}
