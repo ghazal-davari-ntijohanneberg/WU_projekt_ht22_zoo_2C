@@ -9,7 +9,7 @@
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 500px 100px 500px 150px;
+    grid-template-rows: 100px 500px 100px 500px 1fr;
     grid-template-areas: 
     "hea hea hea"
     "art art art"
@@ -31,6 +31,13 @@ header{
     height: auto;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
+}
+
+#h1_header{
+  text-align: center;
+  display: flex;
+  font-size: 80px;
 }
 
 
@@ -188,15 +195,15 @@ footer{
 .topnav {
     overflow: hidden;
     background-color: rgb(63, 141, 75);
-    height: 86px;
-    grid-area: he;
+    height: auto;
+    grid-area: hea;
     display: flex;
     flex-direction: row;
     align-items: center;
-  }
-  
+  } 
+
   /* Style the links inside the navigation bar */
-  .topnav a {
+  .topnav a{
     float: left;
     display: block;
     color: black;
@@ -263,23 +270,31 @@ footer{
 #section_left{
     grid-area: sec1;
     flex-direction: row;
-    background: #e3e19b;
+    background: #e9dfc3;
+    text-align: center;
+}
+
+#p_section_left{
+  margin: 40px;
+  margin-top: 150px;
+  line-height: 100px;
+  font-size: xx-large;
 }
 
 #section_right{
-    grid-area: sec2;
-    flex-direction: row;
-    background: #c57282;
-    background-image: url("../img/animals/bear.jpg");
-    background-size: cover;
-    background-position: center center;
+  grid-area: sec2;
+  flex-direction: row;
+  background: #A4BE7B;
+  background-image: url("../img/animals/bear.jpg");
+  background-size: cover;
+  background-position: center center;
 
 }
 
 #section_left2{
   grid-area: sec3;
   flex-direction: column;
-  background:#cb8090;
+  background:#A4BE7B;
 }
 
 #section_right2{
@@ -307,7 +322,14 @@ footer{
 #section_downright{
   grid-area: sec6;
   flex-direction: row;
-  background: #e7f089;
+  background: #e9dfc3;
+}
+
+#p_section_downright{
+  margin: 40px;
+  margin-top: 150px;
+  line-height: 100px;
+  font-size: xx-large;
 }
 
 #article_middle{
@@ -319,8 +341,12 @@ footer{
 #p_article_middle{
   display: flex;
   padding: 30px;
-  margin: 40px;
   font-size: 25px;
+}
+
+#h2_about{
+  padding: 30px;
+  font-size: 50px;
 }
 
 #our_team{
@@ -361,7 +387,7 @@ footer{
   grid-area: art2;
   display: flex;
   flex-direction: column;
-  background: #FFF6C3;
+  background: #e9dfc3;
   text-align: center;
   align-items: center;
 }
@@ -375,7 +401,13 @@ footer{
   writing-mode: vertical-lr;
   font-size: xx-large;
   direction: ltr;
-  background: #cb8090;
+  background: #A4BE7B;
+}
+
+#restaurant_pic{
+  height: 400px;
+  width: 600px;
+  border: 30px solid black;
 }
 
 #h1_restaurant{
@@ -412,10 +444,11 @@ footer{
   display: grid;
   height: 100vh;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 600px 600px 600px 1fr;
+  grid-template-rows: 1fr 400px 800px 600px 600px 1fr;
   grid-template-areas: 
   "hea hea hea"
   "se1 se1 se1"
+  "ar1 ar1 ar1"
   "art art2 art3"
   "art4 art5 art6"
   "foo foo foo";
@@ -427,24 +460,55 @@ footer{
   font-family: 'Playfair Display',serif;
 }
 
-#restaurant_picture{
+#restaurant{
   grid-area: se1;
   display: flex;
   flex-direction: row;
-  background-image: url("../img/persons/restaurant.jpg");
-  background-size: cover;
-  background-position: center center;
+  background-color: #e9dfc3;
+  justify-content: center;
+  align-items: center;
+}
+
+#restaurant_picture{
+  display: flex;
+  position: absolute;
+  margin-top: -50%;
+  height: 450px;
+  width: 700px;
+  border: 10px solid black;
+}
+
+#chefs_choice{
+  grid-area: ar1;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+#h2_chefs_choice{
+  display: flex;
+  margin-top: 130px;
+}
+
+#img_chefs_choice{
+  display: flex;
+  padding: 20px;
+  height: 450px;
+  width: 450px;
+  border-radius: 50%;
 }
 
 #food1{
   grid-area: art;
   display: flex;
   padding: 20px;
-  margin: 20px;
+  margin: 50px;
   flex-direction: column;
-  background-image: url("../img/food/stake.jpg");
-  background-position: center center;
-  background-size: cover;
+  text-align: center;
+  font-size: 30px;
 }
 
 #food2{
@@ -452,53 +516,73 @@ footer{
   display: flex;
   flex-direction: column;
   padding: 20px;
-  margin: 20px;
-  background-image: url("../img/food/fish_n_chips.jpg");
-  background-position: center center;
-  background-size: cover;
+  margin: 40px;
+  text-align: center;
+  font-size: 30px;
 }
 
 #food3{
   grid-area: art3;
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  margin: 40px;
   padding: 20px;
-  background-image: url("../img/food/meatballs.jpg");
-  background-position: center center;
-  background-size: cover;
+  text-align: center;
+  font-size: 30px;
 }
 
 #food4{
   grid-area: art4;
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  margin: 40px;
   padding: 20px;
-  background-image: url("../img/food/pizza.jpg");
-  background-position: center center;
-  background-size: cover;
-  
+  text-align: center;
+  font-size: 30px;
 }
 
 #food5{
   grid-area: art5;
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  margin: 40px;
   padding: 20px;
-  background-image: url("../img/food/paella.jpg");
-  background-position: center center;
-  background-size: cover;
+  text-align: center;
+  font-size: 30px;
 }
 
 #food6{
   grid-area: art6;
   display: flex;
   flex-direction: column;
-  margin: 20px;
-  margin: 20px;
-  background-image: url("../img/food/samosa.jpg");
-  background-position: center center;
-  background-size: cover;
+  margin: 40px;
+  padding: 20px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.food{
+  height: 400px;
+  width: 430px;
+  border: 10px solid black;
+}
+
+.food:hover{
+  cursor: pointer;
+  box-shadow: 0 9px 18px 0 rgba(0,0,0,0.2);
+}
+
+.bttn_food{
+  padding: 15px 60px;
+  position: relative;
+  top: 22px;
+  background-color: #E5D9B6;
+  color: black;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.bttn_food:hover{
+  background-color:#eeeadd;
+  transition: 0.6s;
 }
