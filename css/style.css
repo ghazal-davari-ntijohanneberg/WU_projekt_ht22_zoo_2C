@@ -35,15 +35,11 @@ header{
 }
 
 #h1_header{
-  text-align: center;
-  display: flex;
   font-size: 80px;
 }
 
-
 #article_picture{
     grid-area: art;
-    display: flex;
     flex-direction: column;
     height: 600px;
     justify-items: center;
@@ -76,7 +72,7 @@ h2{
   left: 100px;
 }
 
-#p_main:hover{
+.p_main:hover{
   color: blue
 }
 
@@ -108,13 +104,6 @@ h2{
   align-items: center;
   align-content: center;
   justify-content: space-around;
-}
-
-.info{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
 }
 
 .info_bttn{
@@ -191,7 +180,6 @@ footer{
   box-shadow: 0 0 0 4px #dab455;
 }
 
-/* Add a black background color to the top navigation bar */
 .topnav {
     overflow: hidden;
     background-color: rgb(63, 141, 75);
@@ -202,7 +190,6 @@ footer{
     align-items: center;
   } 
 
-  /* Style the links inside the navigation bar */
   .topnav a{
     float: left;
     display: block;
@@ -213,20 +200,17 @@ footer{
     font-size: 17px;
   }
   
-  /* Change the color of links on hover */
   .topnav a:hover {
     background-color: rgb(96, 180, 138);
     color: black;
     transition: 0.7s;
   }
   
-  /* Style the "active" element to highlight the current page */
   .topnav a.active {
     background-color: #1d4728;
     color: rgb(255, 255, 255);
   }
   
-  /* Style the search box inside the navigation bar */
   .topnav input[type=text] {
     float: right;
     padding: 6px;
@@ -236,7 +220,6 @@ footer{
     font-size: 17px;
   }
   
-  /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
   @media screen and (max-width: 600px) {
     .topnav a, .topnav input[type=text] {
       float: none;
@@ -268,17 +251,17 @@ footer{
   }
   
 #section_left{
-    grid-area: sec1;
-    flex-direction: row;
-    background: #e9dfc3;
-    text-align: center;
+  grid-area: sec1;
+  flex-direction: row;
+  background: #e9dfc3;
+  text-align: center;
 }
 
 #p_section_left{
   margin: 40px;
   margin-top: 150px;
   line-height: 100px;
-  font-size: xx-large;
+  font-size: 2rem;
 }
 
 #section_right{
@@ -323,23 +306,24 @@ footer{
   grid-area: sec6;
   flex-direction: row;
   background: #e9dfc3;
+  text-align: center;
 }
 
 #p_section_downright{
   margin: 40px;
   margin-top: 150px;
   line-height: 100px;
-  font-size: xx-large;
+  font-size: 2rem;
 }
 
 #article_middle{
   grid-area: arti;
   flex-direction: row;
   text-align: center;
+  overflow: scroll;
 }
 
-#p_article_middle{
-  display: flex;
+.p_article_middle{
   padding: 30px;
   font-size: 25px;
 }
@@ -372,14 +356,12 @@ footer{
 .img_our_team{
   border-radius: 50%;
   height: 400px;
-  display: flex;
   margin: 50px;
 }
 
 .imf_our_team2{
   border-radius: 50%;
   height: 400px;
-  display: flex;
   margin: 50px;
 }
 
@@ -408,10 +390,10 @@ footer{
   height: 400px;
   width: 600px;
   border: 30px solid black;
+  margin-top: 50px;
 }
 
 #h1_restaurant{
-  display: flex;
   padding: 30px;
   margin: 40px;
   position: relative;
@@ -419,14 +401,12 @@ footer{
 }
 
 #p_restaurant{
-  display: flex;
   padding: 30px;
   margin-top: 10px;
   font-size: 25px;
 }
 
 #p_restaurant2{
-  display: flex;
   padding: 30px;
   margin: 40px;
   position: relative;
@@ -434,7 +414,6 @@ footer{
 }
 
 #h1_restaurant{
-  display: flex;
   padding: 30px;
   margin-bottom: 10px;
   font-size: 50px;
